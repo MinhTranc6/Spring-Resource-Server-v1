@@ -6,10 +6,12 @@ import jakarta.persistence.*;
 @Table(name = "myuser")
 public class MyUser {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(name = "username")
     private String userName;
+    @Column(name = "password")
     private String passWord;
     private String role;
 
@@ -18,6 +20,10 @@ public class MyUser {
         this.userName = userName;
         this.passWord = passWord;
         this.role = role;
+    }
+
+    protected MyUser(){
+
     }
 
     public Long getId() {

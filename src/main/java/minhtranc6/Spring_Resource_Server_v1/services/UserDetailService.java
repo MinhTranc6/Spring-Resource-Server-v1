@@ -18,8 +18,8 @@ public class UserDetailService implements UserDetailsService {
     private UserDetailRepository userDetailRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username){
-        Optional<MyUser> user = userDetailRepository.findByUserName(username);
+    public UserDetails loadUserByUsername(String userName){
+        Optional<MyUser> user = userDetailRepository.findByUserName(userName);
         if (user.isPresent()){
             var userObj = user.get();
             return User.builder()
@@ -28,7 +28,7 @@ public class UserDetailService implements UserDetailsService {
                     .roles(getRoles(userObj))
                     .build();
         } else {
-            throw new UsernameNotFoundException(username);
+            throw new UsernameNotFoundException(userName);
         }
     }
 
