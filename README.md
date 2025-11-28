@@ -4,7 +4,7 @@ A Spring Boot application that implements both an OAuth2 Authorization Server an
 
 ## Disclaimer
 
-As of 20th November, Spring Boot version 4.0.0 has been released. As such, old Spring security dependancies has been deprecated and moved to new dependancies for consolidation. As such, this project is under revision for API design related to the new dependancies. Should this project be compiled and build, it will not be successful.
+As of 20th November, Spring Boot version 4.0.0 has been released. Due to this, old Spring security dependancies has been deprecated and moved to new dependancies for consolidation. As such, this project is under revision for API design related to the new dependancies. Should this project be compiled and build, it will not be successful.
 
 ## Overview
 
